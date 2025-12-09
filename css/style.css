@@ -1,0 +1,103 @@
+/* css/style.css */
+
+/* GLOBAL (G) */
+:root {
+    --primary: #2c3e50;
+    --accent: #3498db;
+    --bg: #f9f9f9;
+    --card-bg: #ffffff;
+    --text: #333;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+header {
+    background: var(--primary);
+    padding: 1rem 0;
+}
+
+.nav-links {
+    display: flex; /* Flexbox Requirement */
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.nav-links a.active {
+    border-bottom: 3px solid var(--accent);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--primary);
+    color: #fff;
+    margin-top: 50px;
+}
+
+/* PAGES (P) & SECTIONS (S) */
+
+/* Resume Specifics */
+.resume-container, .samples-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background: var(--card-bg);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.resume-header {
+    text-align: center;
+    border-bottom: 2px solid var(--primary);
+    margin-bottom: 20px;
+}
+
+/* Grid Layouts (Grid Requirement) */
+.two-column-grid, .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Card Styling */
+.card, .job {
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.card h3 {
+    color: var(--accent);
+}
+
+/* Responsive Media Query */
+@media (max-width: 600px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
